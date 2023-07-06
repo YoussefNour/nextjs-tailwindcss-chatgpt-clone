@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
@@ -17,6 +18,7 @@ module.exports = {
       },
       backgroundImage: {
         'vert-dark-gradient': 'linear-gradient(180deg, rgba(53, 55, 64, 0), #353740 58.85%)',
+        'white-gradient': 'linear-gradient(180deg, rgba(255, 255, 255, 0), #ffffff 58.85%)'
       }
     },
   },

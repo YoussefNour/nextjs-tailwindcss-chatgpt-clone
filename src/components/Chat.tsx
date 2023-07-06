@@ -130,43 +130,14 @@ const Chat = (props: any) => {
                   {conversation.map((message, index) => (
                     <Message key={index} message={message} />
                   ))}
-                  <div className="w-full h-32 md:h-48 flex-shrink-0"></div>
+                  <div className="w-full h-32 md:h-48 flex-shrink-0 bg-white dark:bg-gray-800"></div>
                   <div ref={bottomOfChatRef}></div>
                 </div>
               ) : null}
               {showEmptyChat ? (
                 <div className="py-10 relative w-full flex flex-col h-full">
-                  <div className="flex items-center justify-center gap-2">
-                    <div className="relative w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
-                      <button
-                        className="relative flex w-full cursor-default flex-col rounded-md border border-black/10 bg-white py-2 pl-3 pr-10 text-left focus:border-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 dark:border-white/20 dark:bg-gray-800 sm:text-sm align-center"
-                        id="headlessui-listbox-button-:r0:"
-                        type="button"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                        data-headlessui-state=""
-                        aria-labelledby="headlessui-listbox-label-:r1: headlessui-listbox-button-:r0:"
-                      >
-                        <label
-                          className="block text-xs text-gray-700 dark:text-gray-500 text-center"
-                          id="headlessui-listbox-label-:r1:"
-                          data-headlessui-state=""
-                        >
-                          Model
-                        </label>
-                        <span className="inline-flex w-full truncate">
-                          <span className="flex h-6 items-center gap-1 truncate text-white">
-                            {selectedModel.name}
-                          </span>
-                        </span>
-                        <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                          <BsChevronDown className="h-4 w-4 text-gray-400" />
-                        </span>
-                      </button>
-                    </div>
-                  </div>
                   <h1 className="text-2xl sm:text-4xl font-semibold text-center text-gray-200 dark:text-gray-600 flex gap-2 items-center justify-center h-screen">
-                    ChatGPT Clone
+                    WorxGpt
                   </h1>
                 </div>
               ) : null}
@@ -174,7 +145,7 @@ const Chat = (props: any) => {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 w-full border-t md:border-t-0 dark:border-white/20 md:border-transparent md:dark:border-transparent md:bg-vert-light-gradient bg-white dark:bg-gray-800 md:!bg-transparent dark:md:bg-vert-dark-gradient pt-2">
+        <div className="absolute bottom-0 left-0 w-full border-t md:border-t-0 dark:border-white/20 md:border-transparent md:dark:border-transparent bg-white-gradient dark:bg-gray-800 md:white-gradient dark:md:bg-vert-dark-gradient pt-2">
           <form className="stretch mx-2 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl">
             <div className="relative flex flex-col h-full flex-1 items-stretch md:flex-col">
               {errorMessage ? (
