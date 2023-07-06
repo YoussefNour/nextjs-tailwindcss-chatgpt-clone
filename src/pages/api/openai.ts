@@ -1,5 +1,6 @@
 import { DEFAULT_OPENAI_MODEL } from "@/shared/Constants";
 import { OpenAIModel } from "@/types/Model";
+import axios from "axios";
 import * as dotenv from "dotenv";
 import { NextApiRequest, NextApiResponse } from "next";
 import { ChatCompletionRequestMessage, Configuration, OpenAIApi } from "openai";
@@ -44,9 +45,7 @@ export default async function handler(
         content: message.content,
       }));
 
-    const completion = await openai.createChatCompletion({
-      model: model.id,
-      temperature: 0.5,
+    const completion = await axios.post(`${process.env.GPT_API_URL}`,{
       messages: [promptMessage, ...initialMessages, ...latestMessages],
     });
 
